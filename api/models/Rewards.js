@@ -1,0 +1,31 @@
+/**
+ * Rewards.js
+ *
+ * @description :: A model definition.  Represents a database table/collection/etc.
+ * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
+ */
+
+module.exports = {
+
+    attributes: {
+
+        points: {
+            type: 'number',
+            required: true
+        },
+        type: {
+            type: 'string'
+        },
+        userId: {
+            model: 'user'
+        },
+        count:{
+            type:"number",
+            defaultsTo: 0
+        },
+        prototypeId:{
+            model:'prototypes'
+        }
+    }
+
+};
